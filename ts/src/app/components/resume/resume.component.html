@@ -3,13 +3,13 @@
     <div class="text-sm p-3 text-[#5C5C5C]" *ngIf="!showFullText">
       <p class="text-justify md:text-sm text-[.7rem] font-quick font-normal">
         {{ resume }}
-        <a
-          class="btn-show-more inline text-primary font-bold cursor-pointer"
+        <button
+          class="btn-show-more inline text-primary font-bold cursor-pointer border-none bg-transparent"
           (click)="TextExpanded()"
           *ngIf="!showFullText"
         >
           ver mais
-        </a>
+        </button>
       </p>
     </div>
     <div

@@ -8,6 +8,7 @@ import { VideoComponent } from './components/video/video.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { DiscussionComponent } from './components/discussion/discussion.component';
 import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CardComponent } from './components/card/card.component';
     VideoComponent,
     ResumeComponent,
     DiscussionComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule

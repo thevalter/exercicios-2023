@@ -1,17 +1,17 @@
-<div class="flex flex-col border border-[#ECECEC] rounded overflow-hidden">
-  <h4 class="w-full bg-tertiary text-xl font-medium px-4 py-3">Discussões</h4>
+<div class="flex flex-col mb-16 border border-[#ECECEC] rounded overflow-hidden max-w-[90%] mx-auto">
+  <h4 class="w-full bg-tertiary font-medium px-4 py-3 text-sm md:text-xl">Discussões</h4>
   <div class="p-3">
     <!-- Call para novo tópico -->
     <div *ngIf="!showForm" class="flex flex-col justify-center items-center">
-      <h5 class="text-primary font-bold text-lg mt-4 font-roboto">
+      <h5 class="text-primary font-bold text-sm md:text-lg mt-4 font-roboto">
         Compartilhe suas ideias ou dúvidas com os autores!
       </h5>
       <div class="flex mt-6 gap-14">
-        <img src="assets/icons/icone1.png" alt="" />
-        <img src="assets/icons/icone2.png" alt="" />
-        <img src="assets/icons/icone3.png" alt="" />
+        <img src="assets/icons/icone1.svg" alt="" />
+        <img src="assets/icons/icone2.svg" alt="" />
+        <img src="assets/icons/icone3.svg" alt="" />
       </div>
-      <p class="mt-8 font-quick max-w-[626px]">
+      <p class="mt-8 font-quick max-w-[626px] text-[.7rem] md:text-base">
         Sabia que o maior estímulo no desenvolvimento científico e cultural é a
         curiosidade? Deixe seus questionamentos ou sugestões para o autor!
       </p>
@@ -20,30 +20,30 @@
           <path d="M0 1H1034" stroke="#E7E7E7" />
         </svg>
         <button (click)="newTopic()"
-          class="btn-create-topic absolute px-3 py-2 flex items-center gap-1 text-white text-[15px] font-bold bg-gradient-to-b from-secondary to-primary rounded">
-          <span class="material-icons">add</span><span>criar tópico</span>
+          class="btn-create-topic absolute md:px-3 px-2 md:py-2 py-1 text-sm flex items-center gap-1 text-white text-[15px] font-bold bg-gradient-to-b from-secondary to-primary rounded">
+          <i class="bi bi-plus-lg"></i>criar tópico
         </button>
       </div>
     </div>
     <!-- Form para novo tópico -->
     <div *ngIf="showForm && !formSend" class="flex flex-col justify-center items-center border-b border-[#E7E7E7]">
-      <h5 class="text-[#5C5C5C] font-normal text-sm mt-3 font-quick">
+      <h5 class="text-[#5C5C5C] font-normal text-[.7rem] md:text-sm mt-3 font-quick">
         Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
       </h5>
       <form class="w-full" (submit)="sendForm($event)">
         <!-- Label + input -->
         <div class="w-full flex flex-col gap-1">
-          <label class="text-primary font-bold text-lg" for="assunto">
-            Assunto</label><input class="subject p-[10px] border border-[#CCC] rounded focus:outline-0" type="text"
+          <label class="text-primary font-bold text-sm md:text-lg" for="assunto">
+            Assunto</label><input class="subject p-[10px] border text-sm md:text-base border-[#CCC] rounded focus:outline-0" type="text"
             name="assunto" id="assunto" placeholder="Defina um tópico sucinto para notificar os autores..." />
         </div>
         <!-- Label + input -->
         <div class="w-full flex flex-col mt-[10px]">
-          <label class="text-primary font-bold text-lg" for="assunto">
-            Conteúdo</label><textarea class="p-[10px] border border-[#CCC] rounded mt-1 resize-none focus:outline-0"
+          <label class="text-primary font-bold text-sm md:text-lg" for="assunto">
+            Conteúdo</label><textarea class="p-[10px] text-sm md:text-base border border-[#CCC] rounded mt-1 resize-none focus:outline-0"
             type="" name="assunto" id="assunto" rows="3"></textarea>
           <div class="w-full bg-[#EAF1F2] rounded-b overflow-hidden flex justify-end">
-            <button type="submit" class="px-16 py-2 bg-gradient-to-b from-secondary to-primary font-bold text-white">
+            <button type="submit" class="md:px-16 px-8 md:py-2 bg-gradient-to-b from-secondary to-primary font-bold text-white">
               Enviar
             </button>
           </div>
@@ -52,14 +52,14 @@
     </div>
     <!-- Enviado com sucesso -->
     <div *ngIf="formSend" class="flex flex-col justify-center items-center">
-      <h5 class="text-primary font-bold text-lg mt-4 font-roboto">
+      <h5 class="text-primary font-bold text-sm md:text-lg mt-4 font-roboto">
         Seu tópico foi enviado com sucesso! :D
       </h5>
       <p class="mt-8 font-quick text-sm">
         Agradecemos por sua contribuição, uma notificação será enviada ao seu
         email assim que seu tópico for respondido!
       </p>
-      <button type="button" class="text-primary text-lg mt-4 font-quick underline font-medium">
+      <button type="button" class="text-primary text-sm md:text-lg mt-4 font-quick underline font-medium">
         Descubra outros trabalhos!
       </button>
       <!-- Botão criar novo tópico -->
@@ -68,11 +68,10 @@
           <path d="M0 1H1034" stroke="#E7E7E7" />
         </svg>
         <button type="button" (click)="newTopic()"
-          class="btn-create-topic absolute px-3 py-2 flex items-center gap-1 text-white text-[15px] font-bold bg-gradient-to-b from-secondary to-primary rounded">
-          <span>criar novo tópico</span>
+          class="btn-create-topic absolute md:px-3 px-2 md:py-2 py-1 flex items-center gap-1 text-white text-[1rem] font-bold bg-gradient-to-b from-secondary to-primary rounded">
+          criar novo tópico
         </button>
       </div>
-      <!-- Card com blur -->
       <div class="relative flex items-center justify-center mt-4">
         <div
           class="absolute bg-[#dddddd7c] w-full h-full z-10 flex flex-col justify-center items-center rounded text-[#707070] border border-[#E7E7E7]">
@@ -89,30 +88,7 @@
             Editar tópico
           </button>
         </div>
-        <div
-          class="w-full relative border border-[#E7E7E7] flex flex-col py-4 px-6 gap-2 shadow-sm rounded answered-topic">
-          <div>
-            <h4 class="ops-topic-subject font-bold text-primary">
-              Assunto da pergunta aparece aqui
-            </h4>
-            <p class="font-medium text-[#5C5C5C]">
-              Carlos Henrique Santos
-            </p>
-          </div>
-
-          <div class="w-full h-16 text-[#4D4D4D]">
-            <p>
-              Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de
-              processo formativo situado impacto de processo formativo processo...
-            </p>
-          </div>
-          <div class="w-full flex gap-4 text-sm items-center text-[#757575]">
-            <i class="bi bi-three-dots-vertical cursor-pointer text-primary text-xl"></i>
-            <i class="bi bi-heart-fill bg-primary px-2 py-1 text-white rounded cursor-pointer"></i>
-            <a>1 like</a>
-            <a>1 resposta</a>
-          </div>
-        </div>
+        <app-card></app-card>
       </div>
     </div>
     <div class="comments-container flex flex-col gap-4 mt-4">
