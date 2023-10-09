@@ -1,0 +1,82 @@
+<div class="flex flex-col border">
+    <div
+      class="w-full relative border border-[#E7E7E7] flex flex-col py-4 px-6 gap-2 shadow-sm rounded answered-topic">
+      <div>
+        <h4 class="ops-topic-subject font-bold text-primary">
+          Assunto da pergunta aparece aqui
+        </h4>
+        <p class="font-medium text-[#5C5C5C]">
+          Carlos Henrique Santos
+        </p>
+      </div>
+
+      <div class="w-full h-16 text-[#4D4D4D]">
+        <p>
+          Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de
+          processo formativo situado impacto de processo formativo processo...
+        </p>
+      </div>
+      <div class="w-full flex gap-4 text-sm items-center text-[#757575]">
+        <i class="bi bi-three-dots-vertical cursor-pointer text-primary text-xl" (click)="CardExpanded()"></i>
+        <i class="bi bi-heart-fill bg-primary px-2 py-1 text-white rounded cursor-pointer"></i>
+        <a>1 like</a>
+        <a>1 resposta</a>
+      </div>
+    </div>
+    <div *ngIf="showFullCard">
+      <div class="py-4 px-5 border flex flex-col gap-2 border-[#dad7d7] bg-[#E7E7E7]">
+        <div class="flex justify-between items-center">
+          <p class="font-bold text-[#4D4D4D]">Adriano da Silva</p>
+          <div class="flex gap-4 justify-between items-center text-primary">
+            <span>Autor</span>
+            <i class="bi bi-check2-all"></i>
+          </div>
+        </div>
+        <p class="text-[#4D4D4D]">
+          Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo
+          formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da
+          dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+        </p>
+      </div>
+      <div class="py-4 px-5 border flex flex-col gap-2 border-[#dad7d7] bg-[#E7E7E7]">
+        <div class="flex justify-start items-center">
+          <p class="font-bold text-[#4D4D4D]">Carlos Henrique Santos</p>
+        </div>
+        <p class="text-[#4D4D4D]">
+          Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo
+          formativo situado impacto de processo formativo.
+          <br />
+          Obrigada pela resposta, muito interessante o seu trabalho!
+        </p>
+      </div>
+      <div class="py-4 px-5 border flex flex-col gap-2 border-[#dad7d7] bg-[#E7E7E7]">
+        <div class="flex justify-between items-center">
+          <p class="font-bold text-[#4D4D4D]">Camila Ferreira Andrade</p>
+          <div class="flex gap-4 justify-between items-center text-primary fontbold">
+            <span>Coautor</span>
+            <i class="bi bi-check2-all"></i>
+          </div>
+        </div>
+        <p class="text-[#4D4D4D]">
+          Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo
+          formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da
+          dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+          <br />
+          Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão
+          e impacto de processo formativo situado impacto de processo formativo processo.
+        </p>
+      </div>
+      <div class="py-4 px-5 border flex flex-col gap-2 border-[#dad7d7] bg-[#E7E7E7]">
+        <div class="flex justify-between items-center">
+          <p class="font-bold text-[#4D4D4D]">Ana Carolina</p>
+          <div class="flex gap-4 justify-between items-center text-primary fontbold">
+            <span>Coautor</span>
+            <i class="bi bi-check2-all"></i>
+          </div>
+        </div>
+        <p class="text-[#4D4D4D]">
+          Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+        </p>
+      </div>
+    </div>
+  </div>
